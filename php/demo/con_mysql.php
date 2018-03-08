@@ -6,9 +6,9 @@
  * Time: 15:07
  */
 
-namespace PHP;
+namespace PHP\Demo;
 
-require '../vendor/autoload.php';
+require __DIR__.'/../bootstrap.php';
 
 /**
  *

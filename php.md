@@ -25,8 +25,9 @@
     - [五、PHP 实践](#五php-实践)
         - [1、多维数组变一维数组](#1多维数组变一维数组)
     - [六、PHP 面试](#六php-面试)
-    - [七、PHP优化](#七php优化)
-    - [八、参考资料](#八参考资料)
+    - [七、PHP扩展](#七php扩展)
+    - [八、PHP优化](#八php优化)
+    - [九、参考资料](#九参考资料)
 
 <!-- /TOC -->
 
@@ -110,8 +111,44 @@ array_walk_recursive($arr, function($value) use (&$result) {
 
 [PHP面试](php)
 
-## 七、PHP优化
+## 七、PHP扩展
 
-## 八、参考资料
+按phpinfo()上的扩展解读
+
+- date 时间库
+- dom/xml/SimpleXML/libxml xml操作库
+- exif 相机库
+- fileinfo 文件相关库
+- filter 参数过滤库
+- ftp ftp库
+- gd 图像库
+- hash hash算法库
+- iconv 字符串转换库
+- imagick 图像库
+- json json操作库
+- mbstring 多字节字符串操作库
+- memcached 缓存库
+- mongodb 数据库
+- mysqli 数据库
+- mysqlnd 数据库
+- openssl 加密库
+- pcre 正则库
+- PDO 数据库
+- Phar 包
+- posix 多进程库
+- readline 交互库
+- redis 缓存库
+- Reflection 反射库
+- session 会话库
+- SPL 标准库
+- swoole 异步库
+- tokenizer 标记库
+- xdebug debug库
+- Zend OPcache 缓存库
+- zlib 压缩库
+
+## 八、PHP优化
+
+## 九、参考资料
 
 [php手册](http://php.net/)

@@ -6,6 +6,10 @@
  * Time: 12:00
  */
 
+namespace PHP\Demo;
+
+require __DIR__.'/../bootstrap.php';
+
 $a = $b = 0;
 
 function solveMeFirst($a,$b){

@@ -188,7 +188,7 @@
 工厂模式：定义一个标准，用到的类可以按这个标准实现相应功能
 单例模式：防止重复实例化，减少资源调用
 数据映射：数据库ORM应用
-装饰器模式：兼容老数据，多态的应用
+适配器模式：兼容老数据，多态的应用
 
 面试管问了怎么兼容老数据，考察codereview能力
 ```
@@ -234,8 +234,10 @@ test表中数据有500w，字段有id/t_id/type_id/plat_id，语句为`select ma
 考察mysql语句优化，这里主要是优化max函数，max函数会导致全表扫描，效率会很低，可以使用order by加limit进行优化
 
 我是这样答的
-select t_id from test where type_id=1 and plat_id=1 order by t_id limit 1;
+select t_id from test where type_id=1 and plat_id=1 order by t_id desc limit 1;
 当然还可以使用加索引进一步优化速度，这里可以加上(type_id/plat_id)联合索引。
+-------------
+正确做法是给`t_id`加索引，还有(type_id/plat_id)联合索引，order by 并不能避免全表扫描。
 ```
 
 #### 找出N个数中的第M大的数
@@ -465,7 +467,7 @@ laravel的源码看过吗？
 
 ```php
 php面向对象说下
-封装、继承、动态
+封装、继承、多态
 多态描述下
 当时这里说成了重载了，真是扇自己一巴掌，其实多态是一套接口下面的实现类，注入的是接口类，使用的是实现类，从而实现多态
 php的类型有哪些

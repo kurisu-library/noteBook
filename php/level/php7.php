@@ -6,9 +6,9 @@
  * Time: 09:40
  */
 
-namespace PHP;
+namespace PHP\Level;
 
-require '../vendor/autoload.php';
+require __DIR__.'/../bootstrap.php';
 
 echo "----------------------------------------- 1 -----------------------------------------\n";
 // strlen() 与 mb_strlen
